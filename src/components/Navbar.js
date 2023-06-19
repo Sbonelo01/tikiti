@@ -42,6 +42,7 @@ export default class Navbar extends Component {
 const NavWrapper = styled.nav`
   background: var(--mainWhite);
   width: 100%;
+  top: 0;
   position: fixed;
   border-top: 0px solid gray;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
