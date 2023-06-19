@@ -31,10 +31,12 @@ export default class Footer extends Component {
 }
 
 const FooterWrapper = styled.footer`
-  background: #0acf83;
+  background: var(--mainWhite);
   bottom: 0;
   right: 0;
   width: 100%;
+  border-top: 0px solid gray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   .nav-link {
     color: var(--mainWhite) !important;

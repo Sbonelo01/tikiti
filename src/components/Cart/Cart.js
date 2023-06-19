@@ -21,13 +21,6 @@ export default class Store extends Component {
                   <CartColumns />
                   <CartList value={value} />
                   <CartTotals value={value} history={this.props.history} />
-                  <div
-                    style={{
-                      position: "relative",
-                    }}
-                  >
-                    <CartFooter />
-                  </div>
                 </React.Fragment>
               );
             } else {
