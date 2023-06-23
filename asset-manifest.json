@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/tikiti/static/css/main.b095f89a.chunk.css",
+    "main.js": "/tikiti/static/js/main.08b3fc2a.chunk.js",
+    "main.js.map": "/tikiti/static/js/main.08b3fc2a.chunk.js.map",
+    "runtime~main.js": "/tikiti/static/js/runtime~main.ce8f1a4a.js",
+    "runtime~main.js.map": "/tikiti/static/js/runtime~main.ce8f1a4a.js.map",
+    "static/css/2.ca8e03c8.chunk.css": "/tikiti/static/css/2.ca8e03c8.chunk.css",
+    "static/js/2.a96e465b.chunk.js": "/tikiti/static/js/2.a96e465b.chunk.js",
+    "static/js/2.a96e465b.chunk.js.map": "/tikiti/static/js/2.a96e465b.chunk.js.map",
+    "index.html": "/tikiti/index.html",
+    "precache-manifest.af02194b7f52207b5a4c8de190683f55.js": "/tikiti/precache-manifest.af02194b7f52207b5a4c8de190683f55.js",
+    "service-worker.js": "/tikiti/service-worker.js",
+    "static/css/2.ca8e03c8.chunk.css.map": "/tikiti/static/css/2.ca8e03c8.chunk.css.map",
+    "static/css/main.b095f89a.chunk.css.map": "/tikiti/static/css/main.b095f89a.chunk.css.map",
+    "static/media/logo.svg": "/tikiti/static/media/logo.bbdffecc.svg"
+  }
+}
