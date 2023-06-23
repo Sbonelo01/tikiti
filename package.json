@@ -1,5 +1,6 @@
 {
   "name": "e-commerce-site",
+  "homepage" : "http://myname.github.io/tikiti",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
