@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import styled from "styled-components";
-// import { ButtonContainer } from "./Button";
+
 import { isMobile } from "react-device-detect";
+
+import { ProductConsumer } from "../context";
 
 export default class Navbar extends Component {
   render() {
@@ -17,23 +19,27 @@ export default class Navbar extends Component {
             className="navbar-brand"
           />
         </Link>
-        <ul className="navbar-nav align-items-center">
-          {/* <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              tikiti
-            </Link>
-          </li> */}
-        </ul>
-        <Link to="/profile" className="ml-auto">
-          {/* <ButtonContainer> */}
-          {/* <i className="fas fa-cart-plus">my cart</i> */}
-          {/* </ButtonContainer> */}
-          <img
-            src="https://img.myloview.com/posters/social-media-user-icon-vector-default-avatar-profile-image-400-251200035.jpg"
-            className="rounded-circle"
-            style={{ width: isMobile ? "20px" : "40px" }}
-            alt="Avatar"
-          />
+        <Link to="/cart">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto",
+              padding: "60px",
+            }}
+          >
+            <div>
+              <i className="fas fa-cart-plus"></i>
+            </div>
+            <ProductConsumer>
+              {(amount) => {
+                return (
+                  <div style={{ paddingLeft: "10px" }}>
+                    <p>{`R ${amount.cartTotal}`}</p>
+                  </div>
+                );
+              }}
+            </ProductConsumer>
+          </div>
         </Link>
       </NavWrapper>
     );
