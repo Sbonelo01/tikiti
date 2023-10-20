@@ -9,12 +9,12 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^4.3.2"
   },
   "scripts": {
     "predeploy": "yarn build",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
