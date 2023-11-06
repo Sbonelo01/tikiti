@@ -56,27 +56,30 @@ export default class Product extends Component {
             {(value) => {
               return (
                 <>
-                  {console.log(value.detailProduct.info)}
-                  <div onClick={() => value.handleDetail(id)}>
-                    <figure>
-                      <img src={img} alt={`${img}${title}`} />
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">{title}</h2>
-                      <p>{value.detailProduct.info.slice(0, 20)}</p>
-                      <div className="card-actions justify-end">
-                        <button
-                          className={
-                            inCart ? "btn btn-secondary" : "btn btn-primary"
-                          }
-                          onClick={() => {
-                            value.addToCart(id);
-                            value.openModal(id);
-                          }}
-                        >
-                          Get ticket for {price}
-                        </button>
+                  {/* {console.log(value.detailProduct.info)} */}
+
+                  <figure>
+                    <Link to="/details">
+                      <div onClick={() => value.handleDetail(id)}>
+                        <img src={img} alt={`${img}${title}`} />
                       </div>
+                    </Link>
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{title}</h2>
+                    <p>{value.detailProduct.info.slice(0, 20)}</p>
+                    <div className="card-actions justify-end">
+                      <button
+                        className={
+                          inCart ? "btn btn-secondary" : "btn btn-primary"
+                        }
+                        onClick={() => {
+                          value.addToCart(id);
+                          value.openModal(id);
+                        }}
+                      >
+                        Get ticket for {price}
+                      </button>
                     </div>
                   </div>
                 </>
