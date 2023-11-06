@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
-// import styled from "styled-components";
 
 import { isMobile } from "react-device-detect";
 
@@ -10,38 +9,6 @@ import { ProductConsumer } from "../context";
 export default class Navbar extends Component {
   render() {
     return (
-      // <NavWrapper class="navbar nav-bar-expand-sm navbar-dark px-sm-5">
-      //   <Link to="/">
-      //     <img
-      //       width={isMobile ? 50 : 100}
-      //       src={logo}
-      //       alt="store"
-      //       class="navbar-brand"
-      //     />
-      //   </Link>
-      //   <Link to="/cart">
-      //     <div
-      //       style={{
-      //         display: "grid",
-      //         gridTemplateColumns: "auto auto",
-      //         padding: "60px",
-      //       }}
-      //     >
-      //       <div>
-      //         <i class="fas fa-cart-plus"></i>
-      //       </div>
-      //       <ProductConsumer>
-      //         {(amount) => {
-      //           return (
-      //             <div style={{ paddingLeft: "10px" }}>
-      //               <p>{`R ${amount.cartTotal}`}</p>
-      //             </div>
-      //           );
-      //         }}
-      //       </ProductConsumer>
-      //     </div>
-      //   </Link>
-      // </NavWrapper>
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <Link to="/">
@@ -49,7 +16,7 @@ export default class Navbar extends Component {
               width={isMobile ? 50 : 100}
               src={logo}
               alt="store"
-              class="navbar-brand"
+              className="navbar-brand"
             />
           </Link>
         </div>
@@ -57,8 +24,6 @@ export default class Navbar extends Component {
           <div className="dropdown dropdown-end">
             <ProductConsumer>
               {(amount) => {
-                // return <>{amount.cartTotal}</>;
-                // }}
                 return (
                   <>
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -108,48 +73,8 @@ export default class Navbar extends Component {
               }}
             </ProductConsumer>
           </div>
-
-          {/* <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div> */}
         </div>
       </div>
     );
   }
 }
-// const NavWrapper = styled.nav`
-//   background: var(--mainWhite);
-//   width: 100%;
-//   top: 0;
-//   position: fixed;
-//   border-top: 0px solid gray;
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-//   margin-bottom: 100px;
-//   z-index: 5;
-//   .nav-link {
-//     color: var(--mainWhite) !important;
-//     font-size: 1.3 rem;
-//     text-transform: capitalize;
-//   }
-// `;

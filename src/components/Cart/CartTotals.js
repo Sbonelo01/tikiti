@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function CartTotals({ value }) {
+export default function CartTotals({ value, getStoredCart }) {
   // const {clearCart} = value
   const { cartSubTotal, cartTax, cartTotal } = value;
+  console.log("inside cart totals", getStoredCart);
   return (
     <React.Fragment>
       <div className="container">
