@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class Default extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     if (this.props.location.pathname === "/profile") {
       return (
         <div style={{ display: "relative" }}>

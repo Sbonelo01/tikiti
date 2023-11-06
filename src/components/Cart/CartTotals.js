@@ -38,7 +38,7 @@ export default function CartTotals({ value }) {
                 type="button"
                 onClick={() => {
                   // clearCart();
-                  console.log(`pay ${cartTotal}`);
+                  // console.log(`pay ${cartTotal}`);
                 }}
               >
                 Complete payment
