@@ -16,25 +16,35 @@ export default class Modal extends Component {
           } else {
             return (
               <ModalContainer>
-                <div className="container">
-                  <div className="row">
-                    <div
-                      id="modal"
-                      className="col-8 mx-auto col-md-6 col-lg-4 text-capitalize text-center p-5"
-                    >
-                      <h5>ticket added to the cart</h5>
-                      <img src={img} className="img-fluid" alt="product" />
-                      <h5 style={{ marginTop: 5 }}>{title}</h5>
-                      <h5 className="text-muted">price : R {price}</h5>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                  <div>
+                    <h4>Added to cart</h4>
+                  </div>
+                  <figure>
+                    <img src={img} alt="Shoes" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{title}</h2>
+
+                    <h5 className="text-muted">price : R {price}</h5>
+                    <div className="card-actions justify-end">
                       <Link to="/">
-                        <ButtonContainer onClick={() => closeModal()}>
+                        <button
+                          onClick={() => closeModal()}
+                          className="btn btn-outline btn-primary"
+                        >
                           continue shoping
-                        </ButtonContainer>
+                        </button>
                       </Link>
+
                       <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModal()}>
+                        <button
+                          cart
+                          onClick={() => closeModal()}
+                          className="btn btn-outline btn-success"
+                        >
                           complete purchase
-                        </ButtonContainer>
+                        </button>
                       </Link>
                     </div>
                   </div>
