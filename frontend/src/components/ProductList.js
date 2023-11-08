@@ -104,7 +104,7 @@ export default class ProductList extends Component {
         </div>
         <div className="py-5">
           <div className="container">
-            <Title name="" title="Tickets" />
+            <Title name="Tickets" title="" />
 
             <div style={isMobile ? parentPhone : parentDesktop}>
               <ProductConsumer>
