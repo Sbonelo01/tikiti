@@ -7,6 +7,10 @@ import DesktopFooter from "./DesktopFooter";
 import { isMobile } from "react-device-detect";
 // import Carousel from "./Carousel/Carousel";
 
+import image1 from "../img/pexels-alex-andrews-1983046.png";
+import image2 from "../img/pexels-lukas-rodriguez-3473085.png";
+import image3 from "../img/pexels-skylar-kang-6045132.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,11 +33,7 @@ export default class ProductList extends Component {
       gridColumnGap: "28%",
       gridRowGap: "28px",
     };
-    const IMAGES = [
-      "../img/product-1.png",
-      "../img/product-2.png",
-      "../img/product-3.png",
-    ];
+    const IMAGES = [image1, image2, image3];
     return (
       <React.Fragment>
         <div style={{ height: "75vh" }}>
@@ -67,11 +67,16 @@ export default class ProductList extends Component {
               className="mySwiper"
             >
               {IMAGES.map((image) => {
-                console.log(image);
                 return (
                   <SwiperSlide>
                     <div>
-                      <img src={image} />
+                      <img
+                        src={image}
+                        alt={image}
+                        style={
+                          isMobile ? { height: "100vh" } : { height: "auto" }
+                        }
+                      />
                     </div>
                   </SwiperSlide>
                 );
@@ -116,7 +121,8 @@ export default class ProductList extends Component {
             </div>
           </div>
           <br />
-          {isMobile ? <Footer /> : <DesktopFooter />}
+          {/* {isMobile ? <Footer /> : <DesktopFooter />} */}
+          <DesktopFooter />
         </div>
       </React.Fragment>
     );
