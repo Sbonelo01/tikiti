@@ -7,8 +7,8 @@ export default class DesktopFooter extends React.Component {
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">Services</a>
+          {/* <a className="link link-hover"></a> */}
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">
@@ -48,7 +48,7 @@ export default class DesktopFooter extends React.Component {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2023 - All right reserved by izibonelo Pty Ltd</p>
+          <p>Copyright © 2023 izibonelo Pty Ltd</p>
         </aside>
       </footer>
     );

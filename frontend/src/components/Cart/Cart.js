@@ -14,9 +14,6 @@ export default class Store extends Component {
         <ProductConsumer>
           {(value) => {
             const { cart } = value;
-            {
-              console.log(cart);
-            }
             if (cart.length > 0) {
               return (
                 <React.Fragment>
@@ -27,12 +24,15 @@ export default class Store extends Component {
                   <CartColumns />
                   <CartList value={value} />
                   <CartTotals value={value} history={this.props.history} />
+                  {/* <button>PAY</button> */}
                 </React.Fragment>
               );
             } else {
               return <EmptyCart />;
             }
           }}
+          {/* <React.Fragment></React.Fragment> */}
+          {/* <button>PAY</button> */}
         </ProductConsumer>
       </section>
     );

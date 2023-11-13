@@ -8,6 +8,9 @@ import Details from "./components/Details";
 import Cart from "./components/Cart";
 import Default from "./components/Default";
 import Modal from "./components/Modal";
+import Success from "./components/Cart/Checkout/Success";
+import Cancel from "./components/Cart/Checkout/Cancel";
+import Notify from "./components/Cart/Checkout/Notify";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/" element={<ProductList />} />
         <Route path="/details" element={<Details />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/cancel" element={<Cancel />} />
+        <Route path="/notify" element={<Notify />} />
         <Route element={<Default />} />
       </Routes>
       <Modal />
