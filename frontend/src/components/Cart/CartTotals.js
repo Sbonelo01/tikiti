@@ -33,18 +33,39 @@ export default function CartTotals({ value, getStoredCart }) {
               <span className="text-title">subtotal :</span>
               <strong>{cartTotal}</strong>
             </h5>
-            <Link to="/cart">
-              <button
+
+            <form
+              action="https://sandbox.payfast.co.za​/eng/process"
+              method="post"
+            >
+              <input type="hidden" name="merchant_id" value="10000100" />
+              <input type="hidden" name="merchant_key" value="46f0cd694581a" />
+              <input
+                type="hidden"
+                name="return_url"
+                value="https://tikiti.onrender.com/success"
+              />
+              <input
+                type="hidden"
+                name="cancel_url"
+                value="https://tikiti.onrender.com/cancel"
+              />
+              <input
+                type="hidden"
+                name="notify_url"
+                value="https://tikiti.onrender.com/notify"
+              />
+
+              <input type="hidden" name="merchant_id" value="10000100" />
+              <input type="hidden" name="merchant_key" value="46f0cd694581a" />
+              <input type="hidden" name="amount" value={cartTotal} />
+              <input type="hidden" name="item_name" value="Test Product" />
+              <input
+                type="submit"
                 className="btn btn-outline-success text-uppercase mb-3 px-5"
-                type="button"
-                onClick={() => {
-                  // clearCart();
-                  // console.log(`pay ${cartTotal}`);
-                }}
-              >
-                Complete payment
-              </button>
-            </Link>
+                value="Complete Payment"
+              />
+            </form>
           </div>
         </div>
       </div>
