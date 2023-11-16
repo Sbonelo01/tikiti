@@ -1,3 +1,3 @@
 # tikiti
 
-https://tikiti.onrender.com
+https://www.tikiti.store/
