@@ -43,17 +43,17 @@ export default function CartTotals({ value, getStoredCart }) {
               <input
                 type="hidden"
                 name="return_url"
-                value="https://tikiti.store/success"
+                value="https://tikiti-backend.onrender.com/success"
               />
               <input
                 type="hidden"
                 name="cancel_url"
-                value="https://tikiti.store/cancel"
+                value="https://tikiti-backend.onrender.com/cancel"
               />
               <input
                 type="hidden"
                 name="notify_url"
-                value="https://tikiti.store/notify"
+                value="https://tikiti-backend.onrender.com/notify"
               />
 
               <input type="hidden" name="merchant_id" value="10000100" />
