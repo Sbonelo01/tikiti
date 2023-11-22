@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function CartTotals({ value, getStoredCart }) {
   // const {clearCart} = value
@@ -43,17 +43,17 @@ export default function CartTotals({ value, getStoredCart }) {
               <input
                 type="hidden"
                 name="return_url"
-                value="https://tikiti.onrender.com/success"
+                value="https://tikiti.store/success"
               />
               <input
                 type="hidden"
                 name="cancel_url"
-                value="https://tikiti.onrender.com/cancel"
+                value="https://tikiti.store/cancel"
               />
               <input
                 type="hidden"
                 name="notify_url"
-                value="https://tikiti.onrender.com/notify"
+                value="https://tikiti.store/notify"
               />
 
               <input type="hidden" name="merchant_id" value="10000100" />
