@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
 import { ProductConsumer } from "../context";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import DesktopFooter from "./DesktopFooter";
 import { isMobile } from "react-device-detect";
 // import Carousel from "./Carousel/Carousel";
