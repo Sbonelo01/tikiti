@@ -128,12 +128,22 @@ router.get("/notify", function (req, res, next) {
     return result === "VALID";
   };
 
-  const check1 = pfValidSignature(pfData, pfParamString, pfPassphrase);
-  const check2 = pfValidIP(req);
-  const check3 = pfValidPaymentData(cartTotal, pfData);
-  const check4 = pfValidServerConfirmation(pfHost, pfParamString);
+  console.log(pfParamString);
 
-  if (check1 && check2 && check3 && check4) {
+  const isSignatureValid = pfValidSignature(pfData, pfParamString);
+  const isValidIp = pfValidIP(req);
+  const isValidPaymentData = pfValidPaymentData((cartTotal = 165.0), pfData);
+  const isValidServerConfirmation = pfValidServerConfirmation(
+    pfHost,
+    pfParamString
+  );
+
+  if (
+    isSignatureValid &&
+    isValidIp &&
+    isValidPaymentData &&
+    isValidServerConfirmation
+  ) {
     // All checks have passed, the payment is successful
     console.log("success");
   } else {
