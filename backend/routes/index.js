@@ -128,7 +128,7 @@ router.get("/notify", function (req, res, next) {
     return result === "VALID";
   };
 
-  const check1 = pfValidSignature(pfData, pfParamString, passPhrase);
+  const check1 = pfValidSignature(pfData, pfParamString, pfPassphrase);
   const check2 = pfValidIP(req);
   const check3 = pfValidPaymentData(cartTotal, pfData);
   const check4 = pfValidServerConfirmation(pfHost, pfParamString);
