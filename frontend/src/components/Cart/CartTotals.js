@@ -53,7 +53,7 @@ export default function CartTotals({ value, getStoredCart }) {
 
   merchantDetails.signature = generateSignature(merchantDetails, myPassphrase);
 
-  const pfHost = "payfast.co.za/eng/​process"; // for testing purposes
+  const pfHost = "sandbox.payfast.co.za"; // for testing purposes
 
   return (
     <React.Fragment>
@@ -86,6 +86,7 @@ export default function CartTotals({ value, getStoredCart }) {
           </div>
         </div>
       </div>
+
     </React.Fragment>
   );
 }
